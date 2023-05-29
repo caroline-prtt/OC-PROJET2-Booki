@@ -53,6 +53,63 @@ body {
     color: var(--main-bg-color)
 }
 
+/* --------------------------------- */
+/************** HEADER **************/
+/* --------------------------------- */
+
+header{
+    height: 79px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* HEADER -- Logo */
+
+header div {
+    padding: 30px;
+}
+
+header img {
+    max-height: 100%;
+    width: auto;
+}
+
+/* HEADER - nav - menu */
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 25px;
+}
+
+nav ul{
+    padding: 0px;
+    margin: 0px;
+    height: 35px;
+    width: 244px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: bisque;
+}
+
+nav li, nav a{
+    list-style: none;
+    color: black;
+    text-decoration: none;
+}
+
+/* A REPRENDRE CAR LA BARRE DU BORDEUR N'EST PAS ASSEZ HAUT */
+
+nav li a :hover {
+    color : #0065FC;
+    border-top: #0065FC solid 2px;
+}
+
+
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
