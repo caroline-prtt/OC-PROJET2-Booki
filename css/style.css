@@ -1,28 +1,37 @@
-/****** General ***********/
+/************** GÉNÉRAL **************/
+
 * {
     font-family: 'Raleway', sans-serif;
 }
 
+/* :ROOT sélecteur spécial qui cible l'élément racine <html>.
+Est utilisé pour définir des variables css globales*/
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 }
 
+/* Toutes les icones fa-solid en main-color */
 .fa-solid {
     color: var(--main-color);
 }
 
 body {
+    margin: 0px;    
+    padding: 0px;
     display: flex;
     justify-content: center;
 }
 
+/* Largeur max 1440px avec padding droit et gauche */
+/* box-sizing: border-box; permet de faire comprendre dans 
+la largeur max le padding et éventuelles bordure */
 .main-container {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 .section-title {
@@ -63,7 +72,7 @@ header{
     justify-content: space-between;
 }
 
-/* HEADER -- Logo */
+/* Logo */
 
 header div {
     padding: 30px;
@@ -74,7 +83,7 @@ header img {
     width: auto;
 }
 
-/* HEADER - nav - menu */
+/* Nav - Menu */
 
 nav{
     display: flex;
@@ -90,27 +99,30 @@ nav ul{
     width: 244px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    background-color: bisque;
+    align-items:flex-end;
 }
 
-nav li, nav a{
+nav li{
     list-style: none;
+}
+
+nav a{    
     color: black;
     text-decoration: none;
 }
 
-/* A REPRENDRE CAR LA BARRE DU BORDEUR N'EST PAS ASSEZ HAUT */
-
-nav li a :hover {
+/* Au survol souris - padding pour placer la barre en haut */
+nav a:hover {
     color : #0065FC;
     border-top: #0065FC solid 2px;
+    padding-top: 14.5px;
 }
 
 
-
-
+/* ------------------------------------------ */
 /****** Hebergements And Populaires ***********/
+/* ------------------------------------------ */
+
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -217,3 +229,12 @@ nav li a :hover {
 @media (max-width: 767.98px) {
     /* ... */
 }
+
+/* 1. revoir  le flexbox pour l'apparition du menu*/
+
+/* 2. Modifier l'endroit de l'apparition de la barre bleue
+dans le menu de navigation 
+nav a:hover {
+    border-top: #0065FC solid 2px; -- mettre border-bottom
+    padding-top: 14.5px; -- recalculer le padding
+} */
