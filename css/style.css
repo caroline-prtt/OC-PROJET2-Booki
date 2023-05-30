@@ -66,6 +66,7 @@ la largeur max le padding et éventuelles bordure */
     color: var(--main-bg-color)
 }
 
+
 /* --------------------------------- */
 /************** HEADER **************/
 /* --------------------------------- */
@@ -126,13 +127,16 @@ nav a:hover {
 /********* SECTION RECHERCHE *********/
 /* --------------------------------- */
 
-/* Général - info group*/
+
+/*** GÉNÉRAL ***/
+/* ----------- */
 
 .section-info{
     display: flex;
     flex-direction:column;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 35px;
 }
 
 .section-info p {
@@ -140,13 +144,80 @@ nav a:hover {
     font-size: 16px;
 }
 
-/* Headline */
+
+/*** HEADLINE ***/
+/* ----------- */
 
 .info-headline h2{
     margin-bottom: 8px;
 }
 
-/* Search-bar */
+
+/*** SEARCH-BAR ***/
+/* -------------- */
+
+/* Général - formulaire*/
+.search-bar form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 1px solid var(--main-bg-color);
+    border-radius: 15px;
+}
+
+/* Icone Localisation */
+.container-icon-localisation{
+    display: flex;
+    height: 49px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    border-radius: 15px 0px 0px 15px;
+}
+
+/* Champ de saisi */
+.search-bar input{
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    height: 49px;
+    width: 195px;
+    border: none;
+}
+
+/* Icone loupe */
+/* Diplay none pour le faire disparaitre - modification
+dans les media-queries*/
+.container-icon-magnifying-glass {
+    display:none
+}
+
+/* Bouton recherche */
+.button-search{
+    height: 49px;
+    width: 132px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 0px 15px 15px 0px;
+}
+
+.button-search:hover {
+    box-shadow: inset -3px 3px 15px blue;
+} /* ombre au survol du bouton */
+
+
+
+
+/*** FILTRES ***/
+/* ----------- */
+
 
 
 
@@ -273,3 +344,26 @@ nav a:hover {
     border-top: #0065FC solid 2px; -- mettre border-bottom
     padding-top: 14.5px; -- recalculer le padding
 } */
+
+/* 3. Modifier la search bar avec le changement du bouton recherche
+en bouton avec icone loupe 
+
+/* Icone loupe */
+/* .container-icon-magnifying-glass {
+    display: flex;
+    height: 49px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 15px 15px 15px 15px;
+
+    AJOUTER LES BORDURE
+
+    ET METTRE EN DISPLAY NONE LE BOUTON RECHERCHE
+    .button-search{
+    display=none;
+}
+ */
+

@@ -35,21 +35,42 @@
         
         <main>
 
+            <!-- SECTION INFO -->
+
             <section class="section-info">
 
+                <!-- Headline -->
+                
                 <div class="info-headline">
                     <h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>
                     <p>En plein centre-ville ou en pleine nature</p>
                 </div>
                
-                <!-- Bien penser à ajouter pour la version mobile le changement du bouton de recherche/icone loupe -->
+                <!-- Search bar -->
+
                 <div class="search-bar"> 
-                    
+                    <form method="get" action="">                        
+                        <div class="container-icon-localisation">
+                            <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
+                        </div>
+                        <input type="search" name="city" value="Marseille, France">
+                        <button class="container-icon-magnifying-glass">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                        </button>
+                        <button type="submit" class="button-search">Recherche</button>
+                    </form>
                 </div>
                 
+                <!-- Filtres -->
+
                 <div></div>
+
+                <!-- Info -->
+
                 <div></div>
             </section>
+
+            <!-- SECTION HÉBERGEMENT -->
 
             <div class="hebergements-and-populaires">
                 <section id="ancre-hebergements" class="hebergements">
