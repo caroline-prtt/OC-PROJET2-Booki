@@ -22,6 +22,7 @@ Est utilisé pour définir des variables css globales*/
 body {
     margin: 0px;    
     padding: 0px;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,14 +126,13 @@ nav a:hover {
 /********* SECTION RECHERCHE *********/
 /* --------------------------------- */
 
-/* Général */
+/* Général - info group*/
 
 .section-info{
     display: flex;
     flex-direction:column;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: antiquewhite;
 }
 
 .section-info p {
@@ -140,13 +140,17 @@ nav a:hover {
     font-size: 16px;
 }
 
-/* Recherche Headline */
+/* Headline */
 
 .info-headline h2{
     margin-bottom: 8px;
 }
 
-/* Barre recherche */
+/* Search-bar */
+
+
+
+
 
 
 
