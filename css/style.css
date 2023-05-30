@@ -213,11 +213,46 @@ dans les media-queries*/
 } /* ombre au survol du bouton */
 
 
-
-
 /*** FILTRES ***/
 /* ----------- */
 
+/* Général */
+
+.filter-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Titre */
+.filter-title{
+    font-size: 18px;
+}
+
+/* Filtres */
+.container-filter{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4px 19px;
+    gap:10px;
+    border: 2px solid #D9D9D9;
+    border-radius: 50px;
+}
+
+.container-filter:hover{
+    background-color: rgb(224, 235, 253);
+}
+
+.filter{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/*** INFOBAR ***/
+/* ----------- */
 
 
 
@@ -366,4 +401,7 @@ en bouton avec icone loupe
     display=none;
 }
  */
+
+ /* 4. modifier le flexbox des filtres de recherche.
+  */
 
