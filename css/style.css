@@ -125,16 +125,28 @@ nav a:hover {
 /********* SECTION RECHERCHE *********/
 /* --------------------------------- */
 
+/* Général */
+
 .section-info{
     display: flex;
     flex-direction:column;
     justify-content: space-between;
     align-items: flex-start;
+    background-color: antiquewhite;
 }
 
 .section-info p {
     margin: 0px;
+    font-size: 16px;
 }
+
+/* Recherche Headline */
+
+.info-headline h2{
+    margin-bottom: 8px;
+}
+
+/* Barre recherche */
 
 
 
