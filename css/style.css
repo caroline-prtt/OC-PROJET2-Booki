@@ -1,10 +1,11 @@
 /************** GÉNÉRAL **************/
+/* --------------------------------- */
 
 * {
     font-family: 'Raleway', sans-serif;
 }
 
-/* :ROOT sélecteur spécial qui cible l'élément racine <html>.
+/* :ROOT sélecteur qui cible l'élément racine <html>.
 Est utilisé pour définir des variables css globales*/
 :root {
     --main-color: #0065FC;
@@ -17,6 +18,7 @@ Est utilisé pour définir des variables css globales*/
     color: var(--main-color);
 }
 
+/* Suppression des marges par défaut de body */
 body {
     margin: 0px;    
     padding: 0px;
@@ -117,6 +119,12 @@ nav a:hover {
     border-top: #0065FC solid 2px;
     padding-top: 14.5px;
 }
+
+/* --------------------------------- */
+/********* SECTION RECHERCHE *********/
+/* --------------------------------- */
+
+
 
 
 /* ------------------------------------------ */
