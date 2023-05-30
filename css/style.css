@@ -23,6 +23,7 @@ body {
     margin: 0px;    
     padding: 0px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -124,6 +125,16 @@ nav a:hover {
 /********* SECTION RECHERCHE *********/
 /* --------------------------------- */
 
+.section-info{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section-info p {
+    margin: 0px;
+}
 
 
 
