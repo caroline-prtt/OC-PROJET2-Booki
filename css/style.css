@@ -226,6 +226,7 @@ dans les media-queries*/
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 50px;
     gap: 15px;
 }
 
@@ -236,40 +237,47 @@ dans les media-queries*/
 
 /* Filtres */
 .container-filter{
-    height: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 4px 19px;
-    gap:10px;
+
+    padding: 12px 17px;
+    gap: 10px;
+
     border: 2px solid #D9D9D9;
-    border-radius: 50px;
+    border-radius: 25px;
+
+    /* Aménagement des valeurs du padding par rapport 
+à la maquette pour que la .filter-bar respecte bien
+50px de hauteur. Les valeurs indiquées dans la maquette
+(padding: 14px 19px;) font dépasser les bordures de chaque
+filtre (hauteur 52px) */
+    /* L'autre solution pour harmoniser la hauteur
+    de la filtre-bar à 50px partout:
+    max-height: 50px;
+    box-sizing: border-box; */
+/* box-sizing:border-box > la taille indiquée comprend
+les mesures des bordures.
+Doit être couplé avec height/width */
 }
 
 .container-filter:hover{
-    background-color: rgb(224, 235, 253);
+    background-color: #DEEBFF;
 }
 
 .filter{
+    margin: 0px;
     font-size: 17px;
     font-weight: 700;
 }
+
 /* Taille des icones filtre */
-.fa-money-bill-wave{
-    font-size: 16.26px;
+.container-filter .fa-solid{
+    font-size: 20px;
 }
+/* 20px correspond à la hauteur des h3, pour harmoniser
+et ne pas modifier la hauteur de la div. fixée à 50px */
 
-.fa-person{
-    font-size: 22px;
-}
-
-.fa-heart{
-    font-size: 18.33px;
-}
-
-.fa-fire{
-    font-size: 20.08px;
-}
 
 /*** INFOBAR ***/
 /* ----------- */
@@ -282,6 +290,10 @@ dans les media-queries*/
     gap: 10px;
     background-color: rgb(219, 210, 33);
 }
+
+
+
+
 
 
 
