@@ -33,10 +33,13 @@ body {
 /* box-sizing: border-box; permet de faire comprendre dans 
 la largeur max le padding et éventuelles bordure */
 .main-container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box; 
+    gap: 35px;
 }
 
 .section-title {
@@ -67,6 +70,11 @@ la largeur max le padding et éventuelles bordure */
     color: var(--main-bg-color)
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
 
 /* --------------------------------- */
 /************** HEADER **************/
@@ -287,22 +295,32 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    height: 24px;
     gap: 10px;
-    background-color: rgb(219, 210, 33);
 }
 
+.container-fa-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+}
 
-
-
-
-
-
-
-
+.fa-info{
+    font-size : 10px;
+}
 
 /* ------------------------------------------ */
-/****** Hebergements And Populaires ***********/
+/******* HEBERGEMENTS & POPULAIRES ************/
 /* ------------------------------------------ */
+
+
+/*** GÉNÉRAL ***/
+/* ----------- */
 
 .hebergements-and-populaires {
     display: flex;
@@ -367,6 +385,25 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
 }
 
 
+
+
+/* ------------------------------------------ */
+/******* ACTIVITÉS ************/
+/* ------------------------------------------ */
+
+.activites{
+    height: 30px;
+    background-color: lightgreen;
+}
+
+/* ------------------------------------------ */
+/******* FOOTER ************/
+/* ------------------------------------------ */
+
+footer{
+    height: 20px;
+    background-color: darksalmon;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
