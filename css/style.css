@@ -334,10 +334,73 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
     box-sizing: border-box;
 }
 
-/****** Hebergements ***********/
+/*** SECTION HÉBERGEMENT ***/
+/* ----------------------- */
+
+/* Général*/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
+
+/* Container cards */
+.hebergements-cards{
+    /* voir le flexbox pour placer 3 cars en haut et 3 cards en bas */
+    background-color: aquamarine;
+}
+
+/* Cards */
+
+.hebergements-cards .card{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.hebergements-cards img{
+    height: 124px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.hebergements-cards .card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 9px;
+    margin-bottom: 8px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 10px;
+}
+
+/* Afficher plus*/
+.afficher-plus{
+    margin: 0px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /****** Populaires ***********/
 .populaires {
@@ -483,3 +546,7 @@ en bouton avec icone loupe
  /* 4. modifier le flexbox des filtres de recherche.
   */
 
+/* 5. Section hébergement : apparait d'abord l'article
+"les plus populaire" et ensuite "les hérbergements" */
+
+/* 6. Le fond de l'article hébergement n'est plus gris mais blanc */
