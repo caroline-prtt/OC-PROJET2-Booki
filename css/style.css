@@ -342,13 +342,16 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
     width: 65%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 30px;
 }
 
 /* Container cards */
 .hebergements-cards{
-    /* voir le flexbox pour placer 3 cars en haut et 3 cards en bas */
-    background-color: aquamarine;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 /* Cards */
@@ -356,7 +359,11 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
 .hebergements-cards .card{
     display: flex;
     flex-direction: column;
-    width: 33%;
+
+    min-width : 16%; /* Taille minimale de chaque card par rapport à l'ensemble des 6 */
+    flex-basis: calc(33% - 30px); /* Largeur correspondant à 1/3 de l'espace sur l'axe pcple -30px de gap */
+    flex-grow: 1; /* Permet aux blocs de grandir pour remplir l'espace disponible */
+    flex-shrink: 0; /* Empêche les blocs de rétrécir lorsque l'espace est limité > entraine wrap */
 }
 
 .hebergements-cards img{
@@ -547,6 +554,10 @@ en bouton avec icone loupe
   */
 
 /* 5. Section hébergement : apparait d'abord l'article
-"les plus populaire" et ensuite "les hérbergements" */
+"les plus populaire" et ensuite "les hérbergements" 
+utiliser la propriété order:1; sur la div englobant cette section*/
 
 /* 6. Le fond de l'article hébergement n'est plus gris mais blanc */
+
+/* 7. Les cards de la section hébergement marseille sont tous en colonne */
+
