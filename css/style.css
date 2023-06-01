@@ -364,11 +364,14 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
 .hebergements-cards .card{
     display: flex;
     flex-direction: column;
-
-    min-width : 16%; /* Taille minimale de chaque card par rapport à l'ensemble des 6 */
-    flex-basis: calc(33% - 30px); /* Largeur correspondant à 1/3 de l'espace sur l'axe pcple -30px de gap */
-    flex-grow: 1; /* Permet aux blocs de grandir pour remplir l'espace disponible */
-    flex-shrink: 0; /* Empêche les blocs de rétrécir lorsque l'espace est limité > entraine wrap */
+/* Taille de chaque card par rapport à l'ensemble des 6 */
+    width : 16%; 
+/* Largeur correspondant à 1/3 de l'espace sur l'axe pcple -30px de gap */
+    flex-basis: calc(33% - 30px); 
+/* Permet aux blocs de grandir pour remplir l'espace disponible */
+    flex-grow: 1; 
+/* Empêche les blocs de rétrécir lorsque l'espace est limité > entraine wrap */
+    flex-shrink: 0; 
 }
 
 .hebergements-cards img{
@@ -519,9 +522,11 @@ footer p {
     margin: 0px;
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
 
-/****** Media queries ***********/
+/*----------------------------------*/
+/********** MEDIA QUERIES **********/
+/*----------------------------------*/
+
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
@@ -556,8 +561,18 @@ footer p {
     }
 }
 
+/* dans la section info : 
+le titre "filtre" apparait au dessus des boutons filtre */
 
-/* Diminuer la taille de la police des h3 notamment dans les activités car dépassement */
+/* pour la taille des cards d'hébergement, modifier la taille des images et la diminuer
+.hebergements-cards img{
+    height: 124px;
+    border-radius: 20px 20px 0px 0px;
+} 
+ajouter si nécessaire objectif-fit : cover*/
+
+
+/* Diminuer la taille de la police, notamment des h3 notamment dans les activités car dépassement */
 
 
 
