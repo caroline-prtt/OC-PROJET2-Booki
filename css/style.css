@@ -490,10 +490,29 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
 /* ------------------------------------------ */
 
 footer{
-    height: 20px;
-    background-color: darksalmon;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--main-bg-color);
 }
 
+.section-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 20px;
+    flex-basis: 33.33%;
+}
+
+.title-footer{
+    font-size: 18px;
+    margin: 0px;
+}
+
+footer p {
+    margin: 0px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
