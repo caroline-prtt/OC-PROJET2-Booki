@@ -446,18 +446,47 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
     margin-bottom: 5px;
 }
 
-
 /* ------------------------------------------ */
 /*************** ACTIVITÉS ********************/
 /* ------------------------------------------ */
 
 .activites{
-    height: 30px;
-    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+}
+
+.activites-cards{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.activites-cards .card{
+    width: 25%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.activites-cards img{
+    height: 86%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.activites-cards h3{
+    height: 14%;
+    padding-left: 20px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
 }
 
 /* ------------------------------------------ */
-/******* FOOTER ************/
+/****************** FOOTER ********************/
 /* ------------------------------------------ */
 
 footer{
@@ -503,6 +532,13 @@ footer{
     }
 }
 
+
+/* Diminuer la taille de la police des h3 notamment dans les activités car dépassement */
+
+
+
+
+
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
@@ -545,7 +581,9 @@ en bouton avec icone loupe
 
 /* 5. Section hébergement : apparait d'abord l'article
 "les plus populaire" et ensuite "les hérbergements" 
-utiliser la propriété order:1; sur la div englobant cette section*/
+utiliser la propriété order:1; sur la div englobant cette section
+ou flex-direction: column-reverse;*
+/
 
 /* 6. Le fond de l'article hébergement n'est plus gris mais blanc */
 
