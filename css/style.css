@@ -239,8 +239,10 @@ dans les media-queries*/
 
 .filter-bar{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     height: 50px;
     gap: 15px;
 }
@@ -251,7 +253,13 @@ dans les media-queries*/
 }
 
 /* Filtres */
-.container-filter{
+
+.container-filters{
+    display: flex;
+    gap: 15px;
+}
+
+.filter{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -276,18 +284,18 @@ les mesures des bordures.
 Doit être couplé avec height/width */
 }
 
-.container-filter:hover{
+.filter:hover{
     background-color: #DEEBFF;
 }
 
-.filter{
+.filter-name{
     margin: 0px;
     font-size: 17px;
     font-weight: 700;
 }
 
 /* Taille des icones filtre */
-.container-filter .fa-solid{
+.filter .fa-solid{
     font-size: 20px;
 }
 /* 20px correspond à la hauteur des h3, pour harmoniser
@@ -545,19 +553,51 @@ footer{
 /*-----------------------------------------*/
 
 
-/* Medium devices (tablets, less/equal than 1024px) */
+/* MEDIUM DEVICES (tablets, less/equal than 1024px) */
 /* ------------------------------------------------ */
 
 @media (max-width: 1024px) {
+
+    /* FILTRES - le titre est désormais placé au-dessus */
+
+    .filter-bar{
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        gap: 20px;
+    }
+
+    .filter-title{
+        margin: 0px;
+    }
+
+    .filter-name{
+        font-size: 16px;
+    }
+
+    /* HEBERGEMENT & POPULAIRES */
+
+    /* Général */
 
     .hebergements-and-populaires {
         flex-direction: column;
     }
 
+    /* Hébergement */
+
     .hebergements {
         width: 100%;
     }
 
+
+
+
+
+
+
+
+
+    
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -580,6 +620,7 @@ footer{
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+      
 }
 
 /* dans la section info : 
@@ -603,6 +644,10 @@ ajouter si nécessaire objectif-fit : cover*/
 /* --------------------------------------- */
 
 @media (max-width: 767.98px) {
+
+    body{
+        background-color: darksalmon;
+    }
     /* ... */
 }
 
