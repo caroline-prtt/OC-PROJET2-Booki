@@ -476,27 +476,34 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
     gap: 30px;
 }
 
+.activites-cards a{
+    flex: 1 1 0;
+    /* EQUIVAUT À : 
+    flex-grow :1; -- tous les éléments s'étendent pour occuper l'espace disponible
+    flex-shrink:1; -- tous les éléments peuvent rétrécir proportionnelement si manque d'espace
+si flex-shrink à 0 : risque débordement à réduction de l'écran
+    flex-basis:0;  -- permet d'indiquer de commencer par une taille initial de 0 - se couple ensuite avec flex-grow 1 pour une répartition égale de tout l'espace disponible*/
+}
+
 /* Chaque card */
 .activites-cards .card{
-    width: 25%;
+    width: 100%;
+    height: 100%;/* Permet aux 4 éléments d'avoir une harmonie de hauteur lorsque l'écran diminue */
     padding: 0px;
     display: flex;
     flex-direction: column;
 }
 
 .activites-cards img{
-    height: 86%;
+    height: 380px;
     width: 100%;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
 }
 
 .activites-cards h3{
-    height: 14%;
-    padding-left: 20px;
+    padding: 20px 19px;
     margin: 0px;
-    display: flex;
-    align-items: center;
 }
 
 /* ------------------------------------------ */
@@ -525,12 +532,16 @@ footer{
 }
 
 
-/*----------------------------------*/
-/********** MEDIA QUERIES **********/
-/*----------------------------------*/
+/*-----------------------------------------*/
+/************** MEDIA QUERIES **************/
+/*-----------------------------------------*/
+
 
 /* Medium devices (tablets, less/equal than 1024px) */
+/* ------------------------------------------------ */
+
 @media (max-width: 1024px) {
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -581,6 +592,8 @@ ajouter si nécessaire objectif-fit : cover*/
 
 
 /* Small devices (phones, less than 768px) */
+/* --------------------------------------- */
+
 @media (max-width: 767.98px) {
     /* ... */
 }
