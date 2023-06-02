@@ -54,7 +54,7 @@ la largeur max le padding et éventuelles bordure */
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 /* filter utilisé pour des effets visuels - drop-shadow permet de
 créer une ombre autour de l'élement : px pour position horiz.,
-puis vertical, et le 3eme définit le flou de l'ombre, puis couleur rgb 
+puis verti., et le 3eme définit le flou de l'ombre, puis couleur rgb 
 et son opacité. */
 }
 
@@ -78,6 +78,13 @@ main{
     display: flex;
     flex-direction: column;
     gap: 35px;
+}
+
+a{    
+    color: black;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* --------------------------------- */
@@ -122,11 +129,6 @@ nav ul{
 
 nav li{
     list-style: none;
-}
-
-nav a{    
-    color: black;
-    text-decoration: none;
 }
 
 /* Au survol souris - padding pour placer la barre en haut */
@@ -376,6 +378,7 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
 
 .hebergements-cards img{
     height: 124px;
+    width: 100%;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -458,6 +461,7 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
 /*************** ACTIVITÉS ********************/
 /* ------------------------------------------ */
 
+/* Ensemble de la section */
 .activites{
     display: flex;
     flex-direction: column;
@@ -465,12 +469,14 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
     gap: 30px;
 }
 
+/* Le bloc des cards */
 .activites-cards{
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
 
+/* Chaque card */
 .activites-cards .card{
     width: 25%;
     padding: 0px;
@@ -515,10 +521,6 @@ footer{
 
 .title-footer{
     font-size: 18px;
-    margin: 0px;
-}
-
-footer p {
     margin: 0px;
 }
 
