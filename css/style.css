@@ -412,6 +412,7 @@ si flex-shrink à 0 : risque débordement à réduction de l'écran
 .hebergements-cards .card-subtitle {
     margin-top: 0px;
     margin-bottom: 8px;
+    font-size: 14px;
 }
 
 .hebergements-cards .card-rating {
@@ -427,7 +428,6 @@ si flex-shrink à 0 : risque débordement à réduction de l'écran
 
 /*** SECTION POPULAIRES ***/
 /* ----------------------- */
-
 .populaires {
     width: 32%;
 }
@@ -466,11 +466,13 @@ si flex-shrink à 0 : risque débordement à réduction de l'écran
 
 .populaires-cards .card-subtitle {
     margin: 0;
+    font-size: 14px;
 }
 
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
 
 /* ------------------------------------------ */
 /*************** ACTIVITÉS ********************/
@@ -516,9 +518,14 @@ si flex-shrink à 0 : risque débordement à réduction de l'écran
     border-radius: 20px 20px 0px 0px;
 }
 
-.activites-cards h3{
+.activites-cards .card-title{
     padding: 20px 19px;
     margin: 0px;
+    /* pour que le titre soit centrer lorsque la largeur augmente
+    à la réduction de l'écran: */
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
 }
 
 
@@ -575,7 +582,7 @@ footer{
         font-size: 16px;
     }
 
-    /* HEBERGEMENT & POPULAIRES */
+    /* HEBERGEMENTS & POPULAIRES */
 
     /* Général */
 
@@ -583,21 +590,24 @@ footer{
         flex-direction: column;
     }
 
-    /* Hébergement */
+    /* Hébergements */
 
     .hebergements {
         width: 100%;
     }
 
+    .hebergements-cards .card-title{
+        font-size: 14px;
+        /* au lieu de 16px */
+    }
 
+    .hebergements-cards .card-subtitle {
+        font-size: 13px; 
+        /* au lieu de 14px */
+    }
 
+    /* Populaires */
 
-
-
-
-
-
-    
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -621,30 +631,42 @@ footer{
         font-size: 13px;
     }
       
+     /* ACTIVITÉS */
+
+     .activites-cards img{
+        height: 200px;
+    }
+    
+    .activites-cards .card-title{
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    .title-footer{
+        font-size: 16px;
+        /* au lieu de 18px */
+    }
+
+    .section-footer a{
+        font-size: 14px;
+        /* au lieu de 16px */
+    }
 }
 
-/* dans la section info : 
-le titre "filtre" apparait au dessus des boutons filtre */
 
-/* pour la taille des cards d'hébergement, modifier la taille des images et la diminuer
-.hebergements-cards img{
-    height: 124px;
-    border-radius: 20px 20px 0px 0px;
-} 
-ajouter si nécessaire objectif-fit : cover*/
-
-
-/* Diminuer la taille de la police, notamment des h3 notamment dans les activités car dépassement */
-
-
-
-
-
-/* Small devices (phones, less than 768px) */
+/* SMALL DEVICES (phones, less than 768px) */
 /* --------------------------------------- */
 
 @media (max-width: 767.98px) {
 
+
+
+
+
+
+
+    
     body{
         background-color: darksalmon;
     }
