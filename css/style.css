@@ -786,37 +786,31 @@ footer{
     .filter-bar{
         width: 100%;
     }
+
     .container-filters{
         width: 100%;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .filter{
-        flex-basis: 25%;
+       flex-basis: calc(50% - 15px);
+       flex-shrink: 0;
+       box-sizing: border-box;
+       justify-content: flex-start;
     }
 
-
-    /* .container-filters{
-        display: flex;
-        gap: 15px;
-    } */
-    
-    /* .filter{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    
-        padding: 12px 17px;
-        gap: 10px;
-    
-        border: 2px solid #D9D9D9;
-        border-radius: 25px; */
-
+    .filter-name{
+        font-size: 14px;
+        /* au lieu de 17px en desktp et 16px tablette*/
+        /* Media-queries supplémentaire à max 361 pour baisser à 13px
+        afin de conserver la disposition jusqu'à 320px comme demandé */
+    }
 
     /* Info-bar */
     .infobar{
         height: auto;
+
     }
 
     
@@ -874,36 +868,50 @@ body{
 
 
 
-/* Icone loupe */
-/* .container-icon-magnifying-glass {
-    display: flex;
-    height: 49px;
-    width: 50px;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-color);
-    border: 1px solid var(--main-color);
-    border-radius: 15px 15px 15px 15px;
-
-    AJOUTER LES BORDURE
-    Ajuster la taille de l'icone avec font-size;
-
-    ET METTRE EN DISPLAY NONE LE BOUTON RECHERCHE
-    .button-search{
-    display=none;
-}
- */
-
- /* 4. modifier le flexbox des filtres de recherche.
-  */
-
 /* 5. Section hébergement : apparait d'abord l'article
 "les plus populaire" et ensuite "les hérbergements" 
 utiliser la propriété order:1; sur la div englobant cette section
 ou flex-direction: column-reverse;*
 /
 
-/* 6. Le fond de l'article hébergement n'est plus gris mais blanc */
+/* 6. Le fond de l'article hébergement n'est plus gris mais blanc 
+et perd les arrondis*/
 
 /* 7. Les cards de la section hébergement marseille sont tous en colonne */
 
+@media (max-width: 361px) {
+
+    /* Général */
+    .section-title{
+        font-size: 18px;
+    }
+    
+    /* Filtres */
+    .container-filters{
+        gap:10px;
+    }
+
+    .filter{
+        padding: 12px 13px;
+    }
+
+    .filter .fa-solid{
+        font-size: 19px;
+    }
+
+    .filter-name{
+        font-size: 12px;
+    }
+    
+}
+
+
+
+
+@media (max-width: 319px) {
+
+    /* COMPORTEMENT PLUS GARANTI */
+    body{
+        background-color:rgb(172, 185, 199);
+    }
+}
