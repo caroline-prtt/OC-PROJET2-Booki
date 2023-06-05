@@ -189,6 +189,7 @@ nav a:hover {
     background-color: var(--main-bg-color);
     border-radius: 15px 0px 0px 15px;
 }
+
 .fa-location-dot{
     font-size: 18px; 
 }
@@ -597,13 +598,11 @@ footer{
     }
 
     .hebergements-cards .card-title{
-        font-size: 14px;
-        /* au lieu de 16px */
+        font-size: 14px; /* au lieu de 16px */
     }
 
     .hebergements-cards .card-subtitle {
-        font-size: 13px; 
-        /* au lieu de 14px */
+        font-size: 13px;  /* au lieu de 14px */
     }
 
     /* Populaires */
@@ -652,6 +651,11 @@ footer{
         font-size: 14px;
         /* au lieu de 16px */
     }
+
+
+    body{
+        background-color: khaki;
+    }
 }
 
 
@@ -660,30 +664,215 @@ footer{
 
 @media (max-width: 767.98px) {
 
+     /* GÉNÉRALE */
 
+    /* Suppression du padding latérale 50px 
+    Désormais uniquement un padding dans section recherche */
 
-
-
-
-
-    
-    body{
-        background-color: darksalmon;
+    .main-container{
+        padding: 0px;
     }
-    /* ... */
+
+
+    /* HEADER */ 
+    
+    header{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    header img{
+        height: 19px;
+        width: auto;
+    }
+
+    nav{
+        width: 100%;
+        padding: 0px;
+    }
+
+    nav ul{
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    nav li{
+        flex-basis: 50%;
+        display: flex;
+    }
+
+    nav a{
+        width: 100%;
+        height: 36px;
+        border-bottom: 2px solid var(--main-bg-color);
+        box-sizing: border-box; /* Permet de comprendre le border 2px dans la mesure de 36px */
+        text-align: center;
+    }
+
+    nav a:hover{
+        border-top: none;
+        padding-top: 0px;
+        border-bottom: 2px solid #0065FC;
+    }
+
+
+    /* SECTION RECHERCHE */
+
+    .section-info{
+        padding: 0px 20px;
+    }
+
+    /* Search-bar */
+
+    .search-bar {
+        width: 100%;
+    }
+    .search-bar form{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container-icon-localisation{
+        min-width: 50px;
+    }
+
+    .search-bar input{
+    font-size: 16px;
+    flex-grow: 1; /* s'étend pour prendre toute la place disponible */
+    text-align: left;
+    padding-left: 24px;/* Le champ de saisi prend toute la largeur possible
+    ainsi la barre de recherche s'étend jusqu'au bord de l'écran
+    quel que soit la taille du mobile*/
 }
 
-/* 1. revoir  le flexbox pour l'apparition du menu*/
+    .button-search{
+        display: none;
+    }
 
-/* 2. Modifier l'endroit de l'apparition de la barre bleue
-dans le menu de navigation 
-nav a:hover {
-    border-top: #0065FC solid 2px; -- mettre border-bottom
-    padding-top: 14.5px; -- recalculer le padding
-} */
+    .container-icon-magnifying-glass{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 49px;
+        min-width: 49px;
+        font-size: 17px;
+        font-weight: 700;
+        background-color: var(--main-color);
+        border: 1px solid var(--main-color);
+        border-radius: 15px;
 
-/* 3. Modifier la search bar avec le changement du bouton recherche
-en bouton avec icone loupe 
+        margin-left:  -10px;
+        /* décalage de l'élément 10px sur la gauche;
+        utiliser margin-left plutot que : */
+        /* position: relative; 
+        left:-10px; */
+    /* permet de déplacer l'élément en modifiant le flux normal des autres éléments
+    (l'input s'est rallongé grâge à flex-grow:1;
+    et le formulaire prend bien 100% de la place disponible 
+    (pas de décalage à droite de 10px. l'élément prend bien 100% de largeur)
+    alors que l'utilisation de position relative : déplace l'élément 
+    de 10px mais ne modifie pas le flux normal des éléments autour - donc on 
+    aurait eu un manque de 10px à droite : pas aligné avec marge latérale de la page */
+    }
+
+    .container-icon-magnifying-glass:hover{
+        box-shadow: inset -3px 3px 15px blue;
+    }
+
+    /* Filtres */
+
+    .filter-bar{
+        width: 100%;
+    }
+    .container-filters{
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .filter{
+        flex-basis: 25%;
+    }
+
+
+    /* .container-filters{
+        display: flex;
+        gap: 15px;
+    } */
+    
+    /* .filter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        padding: 12px 17px;
+        gap: 10px;
+    
+        border: 2px solid #D9D9D9;
+        border-radius: 25px; */
+
+
+    /* Info-bar */
+    .infobar{
+        height: auto;
+    }
+
+    
+    
+    /* HEBERGEMENTS & POPULAIRES */
+
+    /* Général */
+
+    .hebergements-and-populaires{
+        flex-direction: column-reverse;
+    }
+
+    /* Populaires */
+
+
+    /* HÉBERGEMENT */
+
+    /* ACTIVITÉS */
+
+    .activites-cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
+    /* FOOTER */
+
+    footer{
+        flex-direction: column;
+    }
+
+    .section-footer{
+        padding: 30px;
+        /* au lieu de 20px */
+    }
+
+    .title-footer{
+        font-size: 18px;
+        /* comme en Desktop - 16px en tablette */
+    }
+
+    .section-footer a{
+        font-size: 16px;
+        /* comme tn Desktop - 14px en tablette */
+    }
+
+
+
+body{
+        background-color: rgb(224, 188, 177);
+    }
+}
+
+
+
 
 /* Icone loupe */
 /* .container-icon-magnifying-glass {
