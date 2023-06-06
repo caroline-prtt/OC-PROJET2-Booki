@@ -6,20 +6,18 @@
     font-family: 'Raleway', sans-serif;
 }
 
-/* :ROOT sélecteur qui cible l'élément racine <html>.
-Est utilisé pour définir des variables css globales*/
 :root {
+    /* :root > cible l'élément racine <html> pour définir des variables css globales */
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 }
 
-/* Toutes les icones par défaut en main-color */
 .fa-solid {
+    /* Par défaut, toutes les icones en "main-color" */
     color: var(--main-color);
 }
 
-/* Suppression des marges par défaut de body */
 body {
     margin: 0px;    
     padding: 0px;
@@ -27,12 +25,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px; /* Espacement 30px entre l'header et le .maincontener */
+    gap: 30px; /* Entre header et .main-container */
 }
 
-/* Largeur max 1440px avec padding droit et gauche */
-/* box-sizing: border-box; permet de faire comprendre dans 
-la largeur max le padding et éventuelles bordure */
 .main-container {
     display: flex;
     flex-direction: column;
@@ -54,9 +49,7 @@ la largeur max le padding et éventuelles bordure */
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 /* filter utilisé pour des effets visuels - drop-shadow permet de
-créer une ombre autour de l'élement : px pour position horiz.,
-puis verti., et le 3eme définit le flou de l'ombre, puis couleur rgb 
-et son opacité. */
+créer une ombre autour de l'élement semblable à box-shadow */
 }
 
 .card img {
@@ -72,7 +65,7 @@ et son opacité. */
 }
 
 .neutralStar {
-    color: var(--main-bg-color)
+    color: var(--main-bg-color);
 }
 
 main{
@@ -130,14 +123,23 @@ nav ul{
 
 nav li{
     list-style: none;
+    height: 35px;
+    display: flex;
+    align-items: end;
 }
 
-/* Au survol souris - padding pour placer la barre en haut */
-nav a:hover {
-    color : #0065FC;
-    border-top: #0065FC solid 2px;
-    padding-top: 14.5px;
+nav a{
+    height: 100%;
+    display: flex;
+    align-items: end;
 }
+
+nav a:hover{
+    color : var(--main-color);
+    border-top : 2px solid var(--main-color);
+    box-sizing: border-box;
+}
+
 
 /* --------------------------------- */
 /********* SECTION RECHERCHE *********/
@@ -211,8 +213,6 @@ nav a:hover {
 }
 
 /* Icone loupe */
-/* Diplay none pour le faire disparaitre - modification
-dans les media-queries*/
 .container-icon-magnifying-glass {
     display:none
 }
@@ -265,25 +265,12 @@ dans les media-queries*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 12px 17px;
+    max-height: 50px;
+    padding: 14px 19px;
     gap: 10px;
-
+    box-sizing: border-box;
     border: 2px solid #D9D9D9;
     border-radius: 25px;
-
-    /* Aménagement des valeurs du padding par rapport 
-à la maquette pour que la .filter-bar respecte bien
-50px de hauteur. Les valeurs indiquées dans la maquette
-(padding: 14px 19px;) font dépasser les bordures de chaque
-filtre (hauteur 52px) */
-    /* L'autre solution pour harmoniser la hauteur
-    de la filtre-bar à 50px partout:
-    max-height: 50px;
-    box-sizing: border-box; */
-/* box-sizing:border-box > la taille indiquée comprend
-les mesures des bordures.
-Doit être couplé avec height/width */
 }
 
 .filter:hover{
@@ -300,8 +287,6 @@ Doit être couplé avec height/width */
 .filter .fa-solid{
     font-size: 20px;
 }
-/* 20px correspond à la hauteur des h3, pour harmoniser
-et ne pas modifier la hauteur de la div. fixée à 50px */
 
 
 /*** INFOBAR ***/
@@ -322,7 +307,8 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
     align-items: center;
     height: 24px;
     width: 24px;
-    flex-shrink: 0; /* Aucun rétrécissement possible (sinon écrassement en mobile) */
+    /* Aucun rétrécissement possible (sinon écrassement en mobile) */
+    flex-shrink: 0; 
     box-sizing: border-box;
     border: 1px solid #D9D9D9;
     border-radius: 12px;
@@ -331,6 +317,7 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
 .fa-info{
     font-size : 10px;
 }
+
 
 /* ------------------------------------------ */
 /******* HEBERGEMENTS & POPULAIRES ************/
@@ -351,6 +338,7 @@ et ne pas modifier la hauteur de la div. fixée à 50px */
     padding: 30px;
     box-sizing: border-box;
 }
+
 
 /*** SECTION HÉBERGEMENT ***/
 /* ----------------------- */
@@ -508,7 +496,8 @@ si flex-shrink à 0 : risque débordement à réduction de l'écran
 /* Chaque card */
 .activites-cards .card{
     width: 100%;
-    height: 100%;/* Permet aux 4 éléments d'avoir une harmonie de hauteur lorsque l'écran diminue */
+    /* harmonise la hauteur des 4 éléments lorsque l'écran rétrécit*/
+    height: 100%;
     padding: 0px;
     display: flex;
     flex-direction: column;
@@ -524,8 +513,6 @@ si flex-shrink à 0 : risque débordement à réduction de l'écran
 .activites-cards .card-title{
     padding: 20px 19px;
     margin: 0px;
-    /* pour que le titre soit centrer lorsque la largeur augmente
-    à la réduction de l'écran: */
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -557,16 +544,42 @@ footer{
     margin: 0px;
 }
 
+footer ul{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
 
-/*-----------------------------------------*/
-/************** MEDIA QUERIES **************/
-/*-----------------------------------------*/
+footer li{
+    list-style: none;
+}
+
+/*--------------------------------------------------*/
+/******************* MEDIA QUERIES ******************/
+/*--------------------------------------------------*/
+
+
+/* LARGE DESKTOP (more than 1440px) */
+/* ---------------------------------*/
+
+
+@media (min-width: 1440px) {
+
+    body{
+        margin: auto;
+    }
+}
 
 
 /* MEDIUM DEVICES (tablets, less/equal than 1024px) */
 /* ------------------------------------------------ */
 
+
 @media (max-width: 1024px) {
+
 
     /* FILTRES - le titre est désormais placé au-dessus */
 
@@ -660,8 +673,10 @@ footer{
 /* SMALL DEVICES (phones, less than 768px) */
 /* --------------------------------------- */
 
+
 @media (max-width: 767.98px) {
 
+    
      /* GÉNÉRALE */
 
     /* Suppression du padding latérale 50px 
@@ -702,17 +717,17 @@ footer{
     }
 
     nav a{
-        width: 100%;
-        height: 36px;
         border-bottom: 2px solid var(--main-bg-color);
-        box-sizing: border-box; /* Permet de comprendre le border 2px dans la mesure de 36px */
-        text-align: center;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
     }
 
     nav a:hover{
         border-top: none;
-        padding-top: 0px;
-        border-bottom: 2px solid #0065FC;
+        border-bottom: 2px solid var(--main-color);
     }
 
 
@@ -740,10 +755,8 @@ footer{
     font-size: 16px;
     flex-grow: 1; /* s'étend pour prendre toute la place disponible */
     text-align: left;
-    padding-left: 24px;/* Le champ de saisi prend toute la largeur possible
-    ainsi la barre de recherche s'étend jusqu'au bord de l'écran
-    quel que soit la taille du mobile*/
-}
+    padding-left: 24px;
+    }
 
     .button-search{
         display: none;
@@ -865,14 +878,14 @@ footer{
     }
 
     .hebergements-cards .card-title{
-        font-size: 16px; /* au lieu de 14px en tablette */
+        font-size: 16px; /* au lieu de 14px pour tablette */
     }
 
     .hebergements-cards .card-subtitle {
-        font-size: 14px;  /* au lieu de 13px en tablette */
+        font-size: 14px;  /* au lieu de 13px pour tablette */
     }
 
-    /* Modification de l'ordre d'apparition des cards hébergement */
+    /* Modification de l'ordre d'apparition des hébergement */
 
     .hebergements-cards a:nth-child(1) {
         order: 1;
@@ -912,7 +925,7 @@ footer{
     }
 
     .activites-cards .card-title{
-        font-size: 16px; /* Au lieu de 14px en tablette */
+        font-size: 16px; /* Au lieu de 14px pour tablette */
     }
 
 
@@ -929,12 +942,12 @@ footer{
 
     .title-footer{
         font-size: 18px;
-        /* comme en Desktop - 16px en tablette */
+        /* comme en Desktop - 16px pour tablette */
     }
 
     .section-footer a{
         font-size: 16px;
-        /* comme tn Desktop - 14px en tablette */
+        /* comme tn Desktop - 14px pour tablette */
     }
 }
 
@@ -963,7 +976,6 @@ footer{
         font-size: 12px;
     }
     
-
 }
 
 

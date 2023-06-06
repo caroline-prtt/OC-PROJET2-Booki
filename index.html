@@ -13,7 +13,7 @@
     <!-- Intégration des icones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!-- Liaison fichier css -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -52,11 +52,11 @@
                 <div class="search-bar"> 
                     <form method="get" action="">                        
                         <div class="container-icon-localisation">
-                            <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
+                            <i class="fa-solid fa-location-dot" style="color: #000000;" aria-hidden="true"></i>
                         </div>
-                        <input type="search" name="city" value="Marseille, France">
+                        <input type="search" name="city" value="Marseille, France"> 
                         <button class="container-icon-magnifying-glass">
-                            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;" aria-hidden="true"></i>
                         </button>
                         <button type="submit" class="button-search">Recherche</button>
                     </form>
@@ -72,19 +72,19 @@
 
                     <div class="container-filters">
                         <div class="filter">
-                            <i class="fa-solid fa-money-bill-wave"></i>
+                            <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
                             <h3 class="filter-name">Économique</h3>
                         </div>
                         <div class="filter">
-                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person" aria-hidden="true"></i>
                             <h3 class="filter-name">Familial</h3>
                         </div>
                         <div class="filter">
-                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-heart" aria-hidden="true"></i>
                             <h3 class="filter-name">Romantique</h3>
                         </div>
                         <div class="filter">
-                            <i class="fa-solid fa-fire"></i>
+                            <i class="fa-solid fa-fire" aria-hidden="true"></i>
                             <h3 class="filter-name">Nos pépites</h3>
                         </div>    
                     </div>
@@ -356,19 +356,25 @@
         <footer>
             <div class="section-footer">
                 <h3 class="title-footer">À propos</h3>
-                <a href="#">Fonctionnement du site</a>
-                <a href="#">Conditions générales</a>
-                <a href="#">Données et confidentialité</a>
+                <ul>
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions générales</a></li>
+                    <li><a href="#">Données et confidentialité</a></li>
+                </ul>
             </div>
             <div class="section-footer">
                 <h3 class="title-footer">Nos hébergements</h3>
-                <a href="#">Charte de qualité</a>
-                <a href="#">Proposer votre hôtel</a>
+                <ul>
+                    <li><a href="#">Charte de qualité</a></li>
+                    <li><a href="#">Proposer votre hôtel</a></li>
+                </ul>              
             </div>
             <div class="section-footer">
                 <h3 class="title-footer">Assistance</h3>
-                <a href="#">Centre d'aide</a>
-                <a href="#">Nous contacter</a>
+                <ul>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>    
             </div>
         </footer>
 
