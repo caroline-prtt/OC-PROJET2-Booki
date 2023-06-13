@@ -363,9 +363,11 @@ nav a:hover{
     flex: 1 1 calc(33% - 30px);
     /* EQUIVAUT À : 
     flex-grow :1; -- tous les éléments s'étendent pour occuper l'espace disponible
-    flex-shrink : 1; -- tous les éléments peuvent rétrécir proportionnelement si manque d'espace
-si flex-shrink à 0 : risque débordement à réduction de l'écran
-    flex-basis: calc(33% - 30px);  -- permet d'indiquer de commencer par une taille initiale de 33% soit un tiers de l'axe principal et avec flex row passe à la ligne - se couple ensuite avec flex-grow 1 pour une répartition égale de tout l'espace disponible*/
+    flex-shrink : 1; -- tous les éléments peuvent rétrécir proportionnellement si manque d'espace
+si flex-shrink à 0 : risque de débordement lors de la réduction de l'écran
+    flex-basis: calc(33% - 30px);  -- permet d'indiquer de commencer par une taille initiale de 33% 
+    soit un tiers de l'axe principal et avec flex-wrap passe à la ligne - permet d'avoir les 6 cartes sur deux lignes 
+    se couple ensuite avec flex-grow 1 pour une répartition égale de tout l'espace disponible*/
     display: flex;
     align-items: stretch;
     /* Permet de garder une harmonie en hauteur des cards lorsque l'écran diminue */
@@ -373,7 +375,8 @@ si flex-shrink à 0 : risque débordement à réduction de l'écran
 
 .hebergements-cards .card{
     flex-grow: 1;
-    /* Nécessaire pour que la card occupe tout l'espace définit précédemment pour le lien <a>, soit 33%-30px etc... */
+    /* Nécessaire pour que la card occupe tout l'espace définit précédemment pour le lien <a>, 
+    soit 33%-30px etc... */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -493,9 +496,10 @@ si flex-shrink à 0 : risque débordement à réduction de l'écran
     flex: 1 1 0;
     /* EQUIVAUT À : 
     flex-grow :1; -- tous les éléments s'étendent pour occuper l'espace disponible
-    flex-shrink:1; -- tous les éléments peuvent rétrécir proportionnelement si manque d'espace
-si flex-shrink à 0 : risque débordement à réduction de l'écran
-    flex-basis:0;  -- permet d'indiquer de commencer par une taille initial de 0 - se couple ensuite avec flex-grow 1 pour une répartition égale de tout l'espace disponible*/
+    flex-shrink:1; -- tous les éléments peuvent rétrécir proportionnellement si manque d'espace
+si flex-shrink à 0 : risque de débordement lors de la réduction de l'écran
+    flex-basis:0;  -- permet d'indiquer de commencer par une taille initiale de 0 - 
+    se couple ensuite avec flex-grow 1 pour une répartition égale de tout l'espace disponible*/
 }
 
 /* Chaque card */
