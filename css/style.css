@@ -791,10 +791,6 @@ footer li{
     aurait eu un manque de 10px à droite : pas aligné avec marge latérale de la page */
     }
 
-    .container-icon-magnifying-glass:hover{
-        box-shadow: inset -3px 3px 15px blue;
-    }
-
     /* Filtres */
 
     .filter-bar{
