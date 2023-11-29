@@ -4,6 +4,8 @@
 
 ![image de couverture](https://user.oc-static.com/upload/2022/06/20/16557256333819_FR_1155_P3_Banner-Booki.png)
 
+:computer: https://caroline-prtt.github.io/OC-PROJET2-Booki/
+
 ## Le scénario
 
 La start-up Booki souhaite développer un site internet qui permettrait à ses usagers de trouver des hébergements et des activités dans la ville de leur choix.
